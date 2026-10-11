@@ -23,14 +23,15 @@ export default function DeleteUser() {
         <div className="space-y-6">
             <Heading
                 variant="small"
-                title="Delete account"
-                description="Delete your account and all of its resources"
+                title="Desactivar cuenta"
+                description="Cierra el acceso a tu cuenta y conserva el historial"
             />
             <div className="space-y-4 rounded-lg border border-red-100 bg-red-50 p-4 dark:border-red-200/10 dark:bg-red-700/10">
                 <div className="relative space-y-0.5 text-red-600 dark:text-red-100">
-                    <p className="font-medium">Warning</p>
+                    <p className="font-medium">Antes de continuar</p>
                     <p className="text-sm">
-                        Please proceed with caution, this cannot be undone.
+                        Se cerrarán tus sesiones. Para recuperar el acceso,
+                        contacta con la administración.
                     </p>
                 </div>
 
@@ -40,18 +41,17 @@ export default function DeleteUser() {
                             variant="destructive"
                             data-test="delete-user-button"
                         >
-                            Delete account
+                            Desactivar cuenta
                         </Button>
                     </DialogTrigger>
                     <DialogContent>
                         <DialogTitle>
-                            Are you sure you want to delete your account?
+                            ¿Quieres desactivar tu cuenta?
                         </DialogTitle>
                         <DialogDescription>
-                            Once your account is deleted, all of its resources
-                            and data will also be permanently deleted. Please
-                            enter your password to confirm you would like to
-                            permanently delete your account.
+                            Tu cuenta dejará de tener acceso al área privada.
+                            Los datos y el historial se conservarán. Introduce
+                            tu contraseña para confirmar.
                         </DialogDescription>
 
                         <Form
@@ -92,7 +92,7 @@ export default function DeleteUser() {
                                                     resetAndClearErrors()
                                                 }
                                             >
-                                                Cancel
+                                                Cancelar
                                             </Button>
                                         </DialogClose>
 
@@ -105,7 +105,7 @@ export default function DeleteUser() {
                                                 type="submit"
                                                 data-test="confirm-delete-user-button"
                                             >
-                                                Delete account
+                                                Desactivar cuenta
                                             </button>
                                         </Button>
                                     </DialogFooter>

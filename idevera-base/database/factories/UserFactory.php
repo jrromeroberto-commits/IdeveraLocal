@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Enums\Role;
+use App\Enums\StaffStatus;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -44,6 +46,17 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    public function owner(): static
+    {
+        return $this->state(fn () => ['role' => Role::OWNER]);
+    }
+
+    public function staff(): static
+    {
+        return $this->state(fn () => ['role' => Role::STAFF])
+            ->afterCreating(fn (User $user) => $user->staffProfile()->update(['status' => StaffStatus::ACTIVE]));
     }
 
     /**

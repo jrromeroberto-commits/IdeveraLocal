@@ -1,6 +1,6 @@
 # Preparación del repositorio
 
-Comprobación del entorno: 10 de octubre de 2026. Directorio: `G:\PW\PaginaIde`.
+Comprobación técnica del entorno: 10 de octubre de 2026. Actualización de preparación y mapa: 11 de octubre de 2026. Directorio: `G:\PW\PaginaIde`.
 
 ## Base preparada
 
@@ -9,7 +9,7 @@ Comprobación del entorno: 10 de octubre de 2026. Directorio: `G:\PW\PaginaIde`.
 - `.gitignore` para dependencias, configuración local y archivos generados.
 - `.editorconfig` para UTF-8, finales de línea LF y formato de edición consistente.
 - `.gitattributes` para normalizar archivos de texto y tratar el documento Word como binario.
-- Repositorio Git local con rama inicial `main`, sin commit ni remoto configurado.
+- Repositorio Git con rama `main`, primer commit y remoto `origin`; el usuario confirmó el push.
 
 Git se verificó desde la cuenta de Windows del usuario. Como el repositorio fue creado por el entorno aislado, se registró exclusivamente `G:/PW/PaginaIde` en `safe.directory` de esa cuenta. Se conservaron los propietarios y permisos existentes. La comprobación confirmó que `.env` y dependencias se excluyen, mientras que los ejemplos de entorno, lockfiles y documentos pueden versionarse.
 
@@ -60,7 +60,9 @@ Comprobaciones completadas el 10 de octubre de 2026:
 
 La conexión local a PostgreSQL 18.1 está comprobada. Las cinco migraciones están ejecutadas y Laravel reconoce diez tablas. Los pasos de instalación están en [POSTGRESQL.md](POSTGRESQL.md).
 
-El workflow de GitHub está preparado; su ejecución remota queda pendiente de conectar y subir el repositorio. Las pruebas automatizadas mantienen SQLite en memoria, independiente de PostgreSQL local.
+El workflow de GitHub está preparado. El repositorio ya tiene su primer commit y el usuario confirmó el push; el resultado remoto del workflow no se ha comprobado. Las pruebas automatizadas mantienen SQLite en memoria, independiente de PostgreSQL local.
+
+El 11 de octubre el usuario confirmó el registro, la verificación mediante el enlace del log y el inicio de sesión con acceso al dashboard. El correo sigue en modo `log` para pruebas locales; el envío externo se evalúa si se necesita para una demo posterior.
 
 Referencias técnicas oficiales consultadas:
 
@@ -70,10 +72,10 @@ Referencias técnicas oficiales consultadas:
 
 ## Orden recomendado para empezar
 
-1. Verificar el arranque de la web en el navegador y sus flujos iniciales de registro e inicio de sesión.
-2. Preparar el primer commit. Conectar un repositorio remoto privado cuando se elija el destino.
-3. Traducir los requisitos en fases de implementación y una matriz de permisos antes de desarrollar los flujos de negocio.
-4. Diseñar la home y una pantalla representativa del área del cliente. Documentar los componentes y reglas acordados en un DESIGN.md propio.
+1. Revisar [el plan y las decisiones de la primera tanda](PLAN_DE_IMPLEMENTACION.md).
+2. Implementar roles, estados de cuenta y permisos de la fase F1.
+3. Prototipar la home y el detalle de proyecto CLIENT según [DESIGN.md](../DESIGN.md), en paralelo con la base de permisos.
+4. Construir los flujos por fases y registrar evidencia en [la matriz de requisitos](MATRIZ_DE_REQUISITOS.md).
 
 ## Información que puede prepararse en paralelo
 
@@ -82,8 +84,8 @@ Referencias técnicas oficiales consultadas:
 - Imágenes, vídeos o piezas propias que se puedan mostrar públicamente.
 - Destino del repositorio remoto, si se quiere compartir o respaldar el código.
 
-El dominio, hosting y proveedores de correo, archivos o pagos pueden decidirse antes de integrar y publicar esos servicios. Los recursos visuales definitivos pueden incorporarse después de un primer prototipo con contenido provisional identificado.
+El usuario definió el proyecto como plataforma de pruebas, desarrollada en local hasta terminarla. No se comprará un dominio ni se necesita cuenta oficial de Culqi; PayPal está previsto inicialmente en Sandbox. El correo y los archivos pueden mantenerse locales. Hosting y base de datos gratuitos se evalúan después de terminar, si se decide publicar una demo. Los recursos visuales definitivos pueden incorporarse después de un primer prototipo con contenido provisional identificado.
 
 ## Criterio de preparación completa
 
-La aplicación y las dependencias están instaladas, el frontend compila y las comprobaciones básicas pasan. Laravel conecta a una base PostgreSQL exclusiva con las migraciones iniciales ejecutadas. Queda comprobar el arranque y los flujos iniciales de la web en el navegador.
+La aplicación y las dependencias están instaladas, el frontend compila y las comprobaciones básicas pasan. Laravel conecta a una base PostgreSQL exclusiva con las migraciones iniciales ejecutadas. El usuario comprobó el arranque, registro y acceso en el navegador, y confirmó el primer commit y push. La preparación local está completa; el alcance de IDEVERA se desarrollará siguiendo el mapa documentado.

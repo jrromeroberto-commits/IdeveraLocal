@@ -1,5 +1,7 @@
 export type User = {
     id: number;
+    role: 'CLIENT' | 'STAFF' | 'OWNER';
+    account_status: string | null;
     name: string;
     email: string;
     avatar?: string;
