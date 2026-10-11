@@ -1,0 +1,40 @@
+# Dependencias
+/node_modules/
+/vendor/
+
+# Configuración local; conservar ejemplos sin secretos
+.env
+.env.*
+!.env.example
+!.env.*.example
+/auth.json
+
+# Salidas y archivos temporales de desarrollo
+/public/build/
+/public/hot
+/public/storage
+/bootstrap/ssr/
+/storage/*.key
+/storage/logs/*.log
+*.log
+/.phpunit.cache/
+/.phpunit.result.cache
+/coverage/
+/test-results/
+/playwright-report/
+/database/*.sqlite
+/database/*.sqlite-*
+
+# Configuración personal de herramientas
+/.idea/
+/.vscode/
+/.codex/
+/.agents/
+
+# Sistema operativo y archivos temporales de Office
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*.docx
+~$*.xlsx
+~$*.pptx

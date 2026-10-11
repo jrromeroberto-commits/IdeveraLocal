@@ -1,0 +1,16 @@
+packages:
+    - '.'
+
+ignoreScripts: true
+
+publicHoistPattern:
+    - '@inertiajs/core'
+
+overrides:
+    'vite@*': 'npm:@voidzero-dev/vite-plus-core@0.3.3'
+    'vitest@*': '4.1.11'
+
+# The official Vite Plus core alias uses the toolchain version, not Vite's version.
+peerDependencyRules:
+    allowedVersions:
+        vite: '0.3.3'
