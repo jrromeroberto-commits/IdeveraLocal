@@ -13,7 +13,7 @@ class EnsureAccountIsUsable
     {
         $user = $request->user();
         if (! $user || ! $user->isRestricted() || $request->routeIs(
-            'home', 'login', 'login.store', 'logout',
+            'home', 'public.*', 'login', 'login.store', 'logout',
             'password.request', 'password.email', 'password.reset', 'password.update',
             'verification.notice', 'verification.verify', 'verification.send',
         )) {

@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, FolderGit2, LayoutGrid } from 'lucide-react';
+import { Globe, LayoutGrid } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
@@ -19,7 +19,7 @@ import { index as accounts } from '@/routes/owner/accounts';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'Mi espacio',
         href: dashboard(),
         icon: LayoutGrid,
     },
@@ -27,14 +27,9 @@ const mainNavItems: NavItem[] = [
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: FolderGit2,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
+        title: 'Visitar el estudio',
+        href: '/',
+        icon: Globe,
     },
 ];
 
@@ -45,6 +40,16 @@ export function AppSidebar() {
             ? [
                   ...mainNavItems,
                   { title: 'Cuentas', href: accounts(), icon: LayoutGrid },
+                  {
+                      title: 'Contenido del estudio',
+                      href: '/owner/content',
+                      icon: Globe,
+                  },
+                  {
+                      title: 'Mensajes de contacto',
+                      href: '/owner/contact',
+                      icon: LayoutGrid,
+                  },
               ]
             : mainNavItems;
     return (

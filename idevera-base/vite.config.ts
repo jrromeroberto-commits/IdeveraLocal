@@ -11,6 +11,7 @@ export default defineConfig({
     plugins: lazyPlugins(() => [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
+            ssr: 'resources/js/app.tsx',
             refresh: true,
             fonts: [
                 bunny('Instrument Sans', {
@@ -18,7 +19,7 @@ export default defineConfig({
                 }),
             ],
         }),
-        inertia(),
+        inertia({ ssr: { entry: 'resources/js/app.tsx' } }),
         react(),
         babel({
             presets: [reactCompilerPreset()],
@@ -29,6 +30,8 @@ export default defineConfig({
         }),
     ]),
     server: {
+        host: '127.0.0.1',
+        hmr: { host: 'localhost' },
         watch: {
             ignored: [
                 '**/.agents/**',
@@ -65,6 +68,8 @@ export default defineConfig({
         htmlWhitespaceSensitivity: 'css',
         ignorePatterns: [
             '.github/**',
+            '.impeccable/**',
+            'assets/plates/**',
             'composer.json',
             'resources/js/components/ui/*',
             'resources/views/mail/*',

@@ -25,7 +25,10 @@ const areas = {
 };
 
 export default function Dashboard({ role }: { role: User['role'] }) {
-    const { auth } = usePage<{ auth: Auth }>().props;
+    const { auth, preferredServiceSlug } = usePage<{
+        auth: Auth;
+        preferredServiceSlug: string | null;
+    }>().props;
     const area = areas[role];
     return (
         <>
@@ -49,6 +52,22 @@ export default function Dashboard({ role }: { role: User['role'] }) {
                             </Button>
                         )}
                     </div>
+                    {role === 'OWNER' && (
+                        <Button asChild variant="outline">
+                            <Link href="/owner/content">
+                                Contenido del estudio
+                            </Link>
+                        </Button>
+                    )}
+                    {role === 'CLIENT' && preferredServiceSlug && (
+                        <Button asChild>
+                            <Link
+                                href={`/iniciar-proyecto?servicio=${encodeURIComponent(preferredServiceSlug)}`}
+                            >
+                                Retomar mi idea
+                            </Link>
+                        </Button>
+                    )}
                 </section>
             </main>
         </>

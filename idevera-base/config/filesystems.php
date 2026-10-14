@@ -30,6 +30,13 @@ return [
 
     'disks' => [
 
+        // Public copies are exposed only through the publication-aware controller.
+        'content_public' => [
+            'driver' => 'local',
+            'root' => storage_path('app/content-public'),
+            'throw' => true,
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),

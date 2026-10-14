@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\ContentEntry;
+use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -38,6 +40,15 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'name' => config('app.name'),
+            'site' => fn () => SiteSetting::publicData(),
+            'publicPageSlugs' => fn () => ContentEntry::query()->published()->where('kind', 'PAGE')->pluck('published_slug'),
+            'canonical' => rtrim((string) config('app.url'), '/').$request->getPathInfo(),
+            'origin' => rtrim((string) config('app.url'), '/'),
+            'preferredServiceSlug' => function () use ($request) {
+                $slug = $request->session()->get('preferred_service_slug');
+
+                return is_string($slug) && ContentEntry::query()->published()->where('kind', 'SERVICE')->where('published_slug', $slug)->exists() ? $slug : null;
+            },
             'auth' => [
                 'user' => $request->user() ? [
                     ...$request->user()->only(['id', 'name', 'email', 'email_verified_at', 'created_at', 'updated_at']),

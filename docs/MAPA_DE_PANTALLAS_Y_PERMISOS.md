@@ -40,7 +40,7 @@ La verificación del correo no debe reactivar una cuenta suspendida. Al quitar u
 | Caso | `/portfolio/{slug}` | Problema, solución, resultados y galería; tecnologías solo si se decide publicarlas | F3 |
 | Estudio | `/about` | Presentación y contenido institucional | F3 |
 | Proceso | `/proceso` | Cómo se pasa del brief a la entrega | F3 |
-| Contacto | `/contacto` | Datos y formulario; destino pendiente de D13 | F3 |
+| Contacto | `/contacto` | Datos y formulario; bandeja privada local OWNER, D13 resuelto para pruebas | F3 |
 | Inicio de solicitud | `/iniciar-proyecto` | Explicación y acceso al brief; autenticar antes de guardar una solicitud privada | F3/F4 |
 | Legal | `/legal/{slug}` | Términos, privacidad, cancelaciones/reembolsos y cookies cuando corresponda | F3/F9 |
 | No encontrado | Cualquier ruta inexistente | 404 con orientación y acceso de regreso | F2/F3 |
@@ -109,9 +109,11 @@ La pertenencia al proyecto permite colaboración, pero no concede por sí sola r
 | Cuentas | `/owner/accounts` | CLIENT/STAFF: incorporación, estados, especialidades y actividad reciente; implementado | F1 |
 | Clientes | `/owner/clients` y `/{client}` | Detalle, recursos y actividad comercial; estados ya gestionados en Cuentas | F4 |
 | Staff | `/owner/staff` y `/{staff}` | Detalle y asignaciones; incorporación y especialidades ya gestionadas en Cuentas | F6 |
-| Servicios | `/owner/services` y `/{service}` | Crear, ordenar, editar y publicar | F3 |
-| Portfolio | `/owner/portfolio` y `/{entry}` | Contenido del caso y medios públicos elegidos | F3 |
-| Contenido | `/owner/content` y `/{page}` | Secciones institucionales y contenido público seleccionado | F3 |
+| Servicios | `/owner/content?kind=SERVICE`, `/owner/content/{entry}/edit` | Crear, ordenar, editar borrador y publicar | F3 |
+| Portfolio | `/owner/content?kind=PORTFOLIO`, `/owner/content/{entry}/edit` | Contenido del caso y medios públicos elegidos | F3 |
+| Contenido | `/owner/content?kind=PAGE`, `/owner/content/{entry}/edit` | Secciones institucionales y páginas; publicación independiente del borrador | F3 |
+| Datos públicos | `/owner/content/settings` | Responsable, correo, dirección y aviso legal provisional | F3 |
+| Contacto recibido | `/owner/contact` | Leer consultas privadas y marcarlas como revisadas; sin envío externo | F3 |
 | Solicitudes | `/owner/requests` y `/{request}` | Bandeja, revisión, aclaraciones, notas privadas, viabilidad y cotización | F4 |
 | Cotizaciones | `/owner/quotes` y `/{quoteFamily}` | Versiones, publicación, negociación y aceptación histórica | F5 |
 | Proyectos | `/owner/projects` y `/{project}` | Estado, equipo, alcance aceptado, trabajo y actividad | F6 |

@@ -95,6 +95,8 @@ Fase completada: checks aprobados y validación manual de `/owner/accounts` y do
 
 ### F2 Diseño y base visual
 
+Base visual implementada el 11 de octubre y reconstruida con B el 12 de octubre de 2026. Portada, detalle CLIENT de ejemplo, estados de interfaz, responsive y SSR local disponibles. Alcance, límites y evidencia en [F2: diseño y componentes](F2_DISENO_Y_COMPONENTES.md) y [revisión visual F2/F3](REVISION_VISUAL_F2_F3.md). El contenido propio administrable está disponible en F3; la siguiente implementación funcional es F4.
+
 - Prototipar la home y el detalle de proyecto de CLIENT siguiendo [DESIGN.md](../DESIGN.md).
 - Construir tokens, tipografía, botones, formularios, navegación pública y shell de paneles.
 - Diseñar estados de datos, validación, permisos, conflicto, conexión perdida y acciones requeridas.
@@ -102,6 +104,8 @@ Fase completada: checks aprobados y validación manual de `/owner/accounts` y do
 - Evaluar la entrega del HTML público para SEO con SSR de Inertia y comprobarla localmente; conservar sus necesidades de runtime para elegir alojamiento más adelante.
 
 ### F3 Web pública y CMS
+
+Implementada y comprobada en local. El CMS OWNER guarda borradores, publica copias independientes y retira contenido; contacto llega a una bandeja privada local. Evidencia, rutas y operación en [F3: web pública y contenido](F3_WEB_PUBLICA_Y_CONTENIDO.md). Las páginas legales siguen provisionales y el brief continúa en F4.
 
 - Home, listado y detalle de servicios, portfolio y casos, About, proceso, contacto, páginas legales y 404.
 - Administración de servicios, contenido público seleccionado y portfolio desde OWNER.
@@ -199,7 +203,7 @@ Se mantienen `pnpm run build` y `composer ci:check` como comprobaciones principa
 | D10 | Mensajería inmediata | Consulta incremental inicial; decidir si se necesitan WebSockets según la experiencia esperada | F7 |
 | D11 | Proveedores y posible demo gratuita | PayPal incluido, inicialmente Sandbox; sin dominio comprado ni cuenta oficial Culqi. Correo y archivos locales. Elegir hosting/base gratuitos solo si se decide publicar al terminar | PayPal en F8; alojamiento después de F9 |
 | D12 | Notificación por canal | Definir eventos enviados por correo y cuáles solo dentro de la plataforma; evitar confundirlos con acciones requeridas | F4/F8 |
-| D13 | Contacto e invitación al staff | F1: alta de STAFF por OWNER y contraseña por recuperación, con correo local. Contacto e invitación externa específica pendientes | Alta resuelta en F1; contacto F3 |
+| D13 | Contacto e invitación al staff | F1: alta de STAFF por OWNER y contraseña por recuperación, con correo local. F3: contacto en bandeja privada OWNER; responsable y datos públicos aportados por el usuario. Invitación externa específica pendiente | Alta resuelta en F1; contacto local resuelto en F3 |
 
 No hace falta resolver todas estas decisiones para empezar. La primera tanda será D01–D04 y el prototipo de F2. Las demás conservan su lugar en el mapa y se concretan cuando corresponda.
 
@@ -208,8 +212,8 @@ No hace falta resolver todas estas decisiones para empezar. La primera tanda ser
 - [x] Registrar D01 y base de D03/D13 en F1; D02 queda para F6 y D04 para F2.
 - [x] Implementar y probar política de usuarios, estados y áreas por rol en F1; migración aplicada localmente.
 - [x] Acceso OWNER a `/owner/accounts` y dos factores comprobados manualmente por el usuario.
-- [ ] Diseñar home y detalle de proyecto CLIENT con contenido de prueba identificado.
-- [ ] Revisar composición y animaciones en móvil y escritorio.
-- [ ] Construir los componentes compartidos y conectar el primer flujo de permisos.
+- [x] Diseñar home y detalle de proyecto CLIENT con contenido de prueba identificado (F2).
+- [x] Revisar composición y animaciones en móvil y escritorio (F2; revisión integral en F9).
+- [x] Construir los componentes compartidos y conectar el CMS con los permisos OWNER (F3).
 
 El orden permite comprobar pronto que IDEVERA tiene la calidad visual buscada, mientras se construye la base de seguridad necesaria para sus áreas privadas.

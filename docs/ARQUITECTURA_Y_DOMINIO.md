@@ -63,7 +63,7 @@ Los nombres son orientativos para diseñar migraciones; no constituyen un esquem
 | Módulo | Entidades propuestas | Relaciones y datos importantes |
 | --- | --- | --- |
 | Identidad | User, ClientProfile, StaffProfile, StaffSpecialty | Usuario autenticado; rol global propuesto; estado propio del perfil; varias especialidades por staff |
-| Público | Service, PublicPage, PortfolioEntry, PublicMedia | Slugs, contenido, publicación explícita, orden y medios elegidos; relación portfolio–servicios |
+| Público | ContentEntry (SERVICE/PORTFOLIO/PAGE), ContentMedia, SiteSetting, ContactMessage, ContentChange | Implementado en F3: borrador y copia publicada independientes, medios elegidos, portfolio–servicios y contacto privado OWNER |
 | Solicitudes | ProjectRequest, RequestService, RequestInternalNote | Cliente propietario, brief, estado, fechas y servicio(s) aplicables; notas internas separadas |
 | Cotizaciones | QuoteFamily, QuoteVersion, QuoteLine, QuoteMilestone | Familia vinculada a solicitud; versiones numeradas; snapshot de alcance, moneda, importes, condiciones y vigencia |
 | Aceptación | QuoteAcceptance | Una aceptación válida por familia; versión exacta, actor y fecha; snapshot congelado |

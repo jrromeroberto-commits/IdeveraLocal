@@ -40,5 +40,11 @@ yarn-error.log
 /AGENTS.md
 /CLAUDE.md
 /boost.json
+/.impeccable/build/
+/.impeccable/review/
+/.impeccable/questions/
+/assets/plates/originals/
+/assets/plates/drafts/
+/public/images/studio/
 /opencode.json
 /opencode.jsonc

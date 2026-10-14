@@ -8,6 +8,8 @@ La aclaración del usuario del 11 de octubre de 2026 establece un proyecto de pr
 
 Al cerrar un requisito añadiremos referencia al cambio/commit, prueba o revisión visual que demuestre su cumplimiento. Los criterios de esta tabla son evidencia mínima; las condiciones adicionales de permisos, estados e historial de los documentos asociados también se aplican.
 
+F2 entrega la home y el prototipo del detalle CLIENT, con componentes, estados y SSR. Su evidencia visual y técnica está en [F2: diseño y componentes](F2_DISENO_Y_COMPONENTES.md). F3 conecta la home al contenido publicado e implementa servicios, portfolio, páginas, contacto local y CMS OWNER; evidencia en [F3: web pública y contenido](F3_WEB_PUBLICA_Y_CONTENIDO.md). RF-PUB-001/002/003/005 y RF-OWN-003 cuentan con implementación y pruebas locales. RF-PUB-004 dispone de pantallas, pero sus textos legales siguen provisionales y pendientes de revisión en F9. Las pantallas de proyecto de ejemplo no cierran RF-PRO, RF-DEL, RF-CHA ni RF-PAY.
+
 ## Requisitos funcionales
 
 | ID | Función | Fase | Evidencia de aceptación |

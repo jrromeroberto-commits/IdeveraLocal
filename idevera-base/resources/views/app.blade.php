@@ -26,20 +26,24 @@
             }
 
             html.dark {
-                background-color: oklch(0.145 0 0);
+                background-color: #09090F;
             }
         </style>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         @fonts
 
         @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
+        @if (! request()->routeIs('home', 'public.*') || request()->routeIs('public.start', 'public.not-found'))
+            <meta name="robots" content="noindex,nofollow">
+        @endif
         <x-inertia::head>
-            <title>{{ config('app.name', 'Laravel') }}</title>
+            <title>{{ config('app.name', 'IDEVERA STUDIO') }}</title>
+            @if (request()->routeIs('home'))
+                <meta name="description" content="IDEVERA STUDIO. Diseño, desarrollo y arte digital. From vision to reality.">
+            @endif
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">

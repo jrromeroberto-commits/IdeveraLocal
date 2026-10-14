@@ -1,0 +1,25 @@
+{
+  "source": "assets/plates/forma-image.png",
+  "source_sha256": "37db02bc010304b402e8eba0a5bd670312f3dabe867f6a81039550e7b37b9038",
+  "derivative": "assets/plates/forma-image.webp",
+  "derivative_sha256": "bbf138fddd49e3f88977bfac3932ee579ad11570e01caa6137067670a715a02b",
+  "codec": "C:\\Program Files\\Krita (x64)\\bin\\libwebp.dll",
+  "encoding_function": "WebPEncodeLosslessRGB",
+  "lossless": true,
+  "dimensions": {
+    "width": 1448,
+    "height": 1086
+  },
+  "source_bytes": 2265406,
+  "derivative_bytes": 1496154,
+  "saving_percent": 33.956,
+  "decoded_rgb_sha256": "79b0a0f4341ae01c25949c0639bd6869de6b707870a5b932785de70e2364d03d",
+  "decoded_pixel_equality": true,
+  "prompt_file": "assets/plates/forma-image.prompt.txt",
+  "prompt": "Use the provided crop as the approved visual reference and recreate it as a clean production asset at the target aspect ratio. This is a photographic or illustrated image region. Output the same subject, same framing, same lighting. Preserve silhouette, composition, perspective, palette (#0a090c, #2d2718, #1d1b3e), lighting, material, and texture exactly. Remove every piece of UI text, label, caption, button, and interface chrome that is not part of the artwork itself. Remove letterboxing, borders, card corners, drop shadows, and any layout background that the page will draw in code. Do not add objects. Do not change the concept. Do not restyle. The artwork fills the whole frame edge to edge at the same scale as the reference; no margins, no border, no background band. Region: Warm architectural still life with dark green sculptural form and stone sphere; quiet left area for the project caption.\nGenerate a newly rendered opaque PNG photograph/3D art plate at 1536x1152 pixels, exactly 4:3 aspect ratio. Input image is reference only; do not reuse its pixels. Remove the rectangular redaction blocks and tiny horizontal rule from the left, replacing them with the continuous architectural wall and shadow. Preserve a large dark green textured stone semicircular slab on the right, its straight edge tilted from x=57 percent y=15 percent down to x=78 percent y=90 percent, curved edge bulging rightward. Preserve the warm pale stone sphere in front at x=56 percent and y=71 percent, on two stepped warm stone plinths at the bottom. A narrow dark vertical architectural recess rises behind near center. Warm beige plaster wall, dramatic sunlight from upper right creates a broad diagonal bright band; rich brown and olive shadows. Left 40 percent stays quiet and mostly dark for text added by code. Palette dark brown #191111, warm shadow #2d2718, pale stone #d8bb98, green #3f4537, ochre #a78564. Match reference camera, scale, light and stone textures. No letters, captions, controls, rectangular masks, logos, watermark, border, frame or UI.\n",
+  "metadata_helper_exit_code": 0,
+  "metadata_helper_message": "EMBEDDED: G:\\PW\\PaginaIde\\idevera-base\\assets\\plates\\forma-image.webp.json (sidecar fallback for this format)",
+  "metadata_storage": "helper sidecar fallback for WebP",
+  "prompt_sidecar": "assets/plates/forma-image.webp.json",
+  "source_png_unchanged": true
+}

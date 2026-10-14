@@ -1,0 +1,235 @@
+/* Catalogs, documents and forms follow the editorial direction at task scale. */
+.public-page {
+    padding-block: 44px 96px;
+}
+.public-page-heading {
+    margin-block: 24px 40px;
+    max-width: 1080px;
+}
+.public-page-heading h1,
+.public-error h1 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: clamp(38px, 5.5vw, 80px);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.12;
+    margin-block: 0 20px;
+}
+.public-page-heading > p:not(.eyebrow) {
+    font-size: 18px;
+    max-width: 65ch;
+}
+.public-catalog .public-page-heading {
+    margin-bottom: 28px;
+}
+.portfolio-filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.portfolio-filter label {
+    font-size: 14px;
+    color: #c8c8d5;
+}
+.portfolio-filter select {
+    background: #14141d;
+    color: #f5f5f8;
+    border: 1px solid #49495c;
+    border-radius: 8px;
+    font-size: 16px;
+    min-height: 48px;
+    padding: 10px 32px 10px 14px;
+    max-width: 100%;
+}
+.public-work-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: 44px 24px;
+    align-items: start;
+}
+.public-work-grid .case-cover,
+.public-work-grid .concept-image {
+    aspect-ratio: auto;
+    height: clamp(260px, 30vw, 440px);
+    border-radius: 0;
+    object-fit: cover;
+}
+.concept-image,
+.cms-preview-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1.65;
+}
+.work-meta {
+    margin-top: 18px;
+}
+.public-work-grid .work-meta h3 {
+    font-size: 28px;
+    letter-spacing: -0.025em;
+}
+.public-work-grid .work-meta p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+.public-work-grid .concept-label {
+    font-size: 12px;
+    color: #c8c8d5;
+    letter-spacing: 0;
+}
+.catalog-row {
+    padding-block: 30px;
+    gap: 24px;
+}
+.catalog-row h2 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-weight: 500;
+    font-size: clamp(26px, 2.8vw, 40px);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+.catalog-row p {
+    font-size: 16px;
+    max-width: 65ch;
+    line-height: 1.7;
+}
+.public-page .example-notice {
+    border: 1px solid #49495c;
+    border-radius: 8px;
+    background: #181521;
+    font-size: 14px !important;
+    line-height: 1.65;
+    max-width: 65ch;
+}
+.public-page-heading .detail-category {
+    font-size: 14px !important;
+    margin-top: 16px;
+}
+.detail-layout {
+    margin-top: 48px;
+}
+.detail-layout.no-related {
+    display: block;
+}
+.detail-label h2 {
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+.public-copy {
+    max-width: 65ch;
+    font-size: 17px;
+    line-height: 1.8;
+}
+.public-copy > p {
+    white-space: pre-line;
+}
+.case-hero .concept-image,
+.case-hero > img {
+    aspect-ratio: 2;
+    max-height: 620px;
+    object-fit: cover;
+}
+.detail-cta h2,
+.contact-layout aside h2 {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: clamp(28px, 3.3vw, 46px);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+.public-contact .public-page-heading {
+    max-width: 880px;
+}
+.contact-layout {
+    align-items: start;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+.public-field :is(input, textarea),
+.public-checkbox,
+.contact-layout aside > p {
+    font-size: 16px;
+}
+.public-field :is(input, textarea) {
+    caret-color: #b4a7ff;
+}
+.public-field textarea {
+    line-height: 1.7;
+}
+.public-contact-details dd {
+    overflow-wrap: anywhere;
+    font-size: 16px;
+}
+.start-steps h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.start-steps li {
+    font-size: 16px;
+}
+.studio-site :is(input, select):focus-visible {
+    outline: 2px solid #b4a7ff;
+    outline-offset: 5px;
+}
+.studio-dialog .concept-image {
+    max-height: 300px;
+    aspect-ratio: 1.65;
+}
+.studio-dialog .review-draft {
+    font-size: 16px;
+    line-height: 1.7;
+    caret-color: #b4a7ff;
+}
+.public-pagination {
+    font-variant-numeric: tabular-nums;
+}
+@media (max-width: 767px) {
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .studio-site .footer-top nav {
+        flex-wrap: wrap;
+        gap: 8px 22px;
+        max-width: 100%;
+    }
+    .public-page {
+        padding-block: 24px 64px;
+    }
+    .public-page-heading {
+        margin-block: 16px 28px;
+    }
+    .public-page-heading h1 {
+        font-size: 38px;
+    }
+    .public-page-heading > p:not(.eyebrow) {
+        font-size: 16px;
+    }
+    .public-work-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .public-work-grid .case-cover,
+    .public-work-grid .concept-image {
+        height: auto;
+        aspect-ratio: 1.25;
+    }
+    .portfolio-filter {
+        gap: 10px;
+    }
+    .portfolio-filter label {
+        flex-basis: 100%;
+    }
+    .portfolio-filter select {
+        flex: 1;
+        min-width: 0;
+    }
+    .case-hero .concept-image,
+    .case-hero > img {
+        aspect-ratio: 1.3;
+    }
+    .public-copy {
+        font-size: 16px;
+    }
+}
+.public-pagination a {
+    gap: 8px;
+}
